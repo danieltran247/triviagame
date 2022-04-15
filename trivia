@@ -1,0 +1,174 @@
+background(212, 255, 112);
+    
+//dan bitmoji
+var bitmojiHead = function(danx, dany, danheight) {
+    //Head
+    fill(255, 252, 219);
+    ellipse(danx,dany,danheight/150*80,danheight/150*108);
+    //Face
+    fill(255, 255, 255);
+    ellipse(danx-(danheight/150*17),dany+(danheight/150*4),danheight/150*14,danheight/150*10);
+    ellipse(danx+(danheight/150*17),dany+(danheight/150*4),danheight/150*14,danheight/150*10);
+    fill(0, 0, 0);
+    ellipse(danx+(danheight/150*17),dany+(danheight/150*4),danheight/150*5,danheight/150*7);
+    ellipse(danx+(danheight/150*-17),dany+(danheight/150*4),danheight/150*5,danheight/150*7);
+    line(danx+(danheight/150*-15),dany+(danheight/150*32),danx+(danheight/150*10),dany+(danheight/150*34));
+    //Hair
+    strokeWeight(3);
+    fill(3, 1, 1);
+     arc(danx+(danheight/150*1), dany-(danheight/150*29), danheight/150*85, danheight/150*50, 145, 399);  
+     arc(danx+(danheight/150*-1), dany-(danheight/150*26), danheight/150*103, danheight/150*77, 139, 399);
+     arc(danx+(danheight/150*-33), dany-(danheight/150*9), danheight/150*43, danheight/150*83, 99, 308);  
+     arc(danx+(danheight/150*33), dany-(danheight/150*8), danheight/150*43, danheight/150*88, 251, 437);
+     //headband
+    strokeWeight(1);
+    fill(168, 136, 136);
+    rect(danx+(danheight/150*-56), dany-(danheight/150*32), danheight/150*112, danheight/150*11,4);
+    };
+    var bitmojiBody = function(danx, dany, danheight){
+    //Torso
+ fill(0, 204, 255);
+ rect(danx+(danheight/150*-34),dany+(danheight/150*55),danheight/150*67,danheight/150*120,20);
+ fill(255, 255, 255);
+ text("D.T.",danx+(danheight/150*-11),dany+(danheight/150*92));
+ //Arms
+ fill(0, 204, 255);
+ rect(danx+(danheight/150*-58),dany+(danheight/150*66),danheight/150*26,danheight/150*30,5);
+ rect(danx+(danheight/150*30),dany+(danheight/150*66),danheight/150*26,danheight/150*30,5);
+ stroke(255, 252, 219);
+ fill(255,252,219);
+ rect(danx+(danheight/150*-55),dany+(danheight/150*95),danheight/150*20,danheight/150*61);
+ rect(danx+(danheight/150*33),dany+(danheight/150*95),danheight/150*20,danheight/150*61);
+ ellipse(danx+(danheight/150*-43),dany+(danheight/150*167),danheight/150*17,danheight/150*36);
+ ellipse(danx+(danheight/150*43),dany+(danheight/150*167),danheight/150*17,danheight/150*36);
+    };
+var drawBitmoji = function(danx, dany, danheight) {
+        bitmojiHead(danx,dany,danheight);
+        bitmojiBody(danx,dany,danheight);
+    };
+drawBitmoji(280,137,87);
+
+//katie bitmoji
+var drawBitmoji = function(x,y) {
+    var bitmojiPosition = 150;
+        noStroke();
+        fill(201, 201, 201);
+        ellipse(x-(bitmojiPosition/150*1),y+(bitmojiPosition/150*39),bitmojiPosition/150*74,bitmojiPosition/150*20);
+        ellipse(x-(bitmojiPosition/150*1),y+(bitmojiPosition/150*80),bitmojiPosition/150*93,bitmojiPosition/150*95);
+    // sweatshirt
+    
+        noStroke();
+        fill(255,224,189);
+        ellipse(x-(bitmojiPosition/150*1),y-(bitmojiPosition/150*7),bitmojiPosition/150*68,bitmojiPosition/150*94); // head
+    
+        fill(0,0,0);
+        ellipse(x-(bitmojiPosition/150*1),y-(bitmojiPosition/150*33),bitmojiPosition/150*70,bitmojiPosition/150*42); // hat
+    
+        fill(115, 78, 78);
+        ellipse(x+(bitmojiPosition/150*4),y-(bitmojiPosition/150*25),bitmojiPosition/150*75,bitmojiPosition/150*30); 
+        ellipse(x-(bitmojiPosition/150*30),y-(bitmojiPosition/150*10),bitmojiPosition/150*22,bitmojiPosition/150*45);
+        ellipse(x+(bitmojiPosition/150*35),y-(bitmojiPosition/150*4),bitmojiPosition/150*10,bitmojiPosition/150*29); // hair
+    
+        stroke(0,0,0);
+        fill(255,224,189);
+        ellipse(x-(bitmojiPosition/150*10),y-(bitmojiPosition/150*1),bitmojiPosition/150*19,bitmojiPosition/150*14);
+        ellipse(x+(bitmojiPosition/150*19),y-(bitmojiPosition/150*1),bitmojiPosition/150*19,bitmojiPosition/150*14);
+        line(x+(bitmojiPosition/150*8),y-(bitmojiPosition/150*2),x-(bitmojiPosition/150*1),y-(bitmojiPosition/150*2)); // glasses
+    
+        fill(48, 120, 66);
+        ellipse(x-(bitmojiPosition/150*10),y-(bitmojiPosition/150*1),bitmojiPosition/150*6,bitmojiPosition/150*4);
+        ellipse(x+(bitmojiPosition/150*18),y-(bitmojiPosition/150*1),bitmojiPosition/150*6,bitmojiPosition/150*4); // eyes
+    
+        fill(255,224,189);
+        bezier(x+(bitmojiPosition/150*7),y-(bitmojiPosition/150*1),x+(bitmojiPosition/150*20),y+(bitmojiPosition/150*22),x-(bitmojiPosition/150*7),y+(bitmojiPosition/150*12),x+(bitmojiPosition/150*2),y+(bitmojiPosition/150*11)); //nose
+    
+        fill(240, 168, 198);
+        arc(x+(bitmojiPosition/150*4),y+(bitmojiPosition/150*22),bitmojiPosition/150*24,bitmojiPosition/150*7,bitmojiPosition/150*30,bitmojiPosition/150*146); // mouth
+    
+        fill(0, 0, 0);
+        line(x-(bitmojiPosition/150*21),y+(bitmojiPosition/150*49),x-(bitmojiPosition/150*21),y+(bitmojiPosition/150*69));
+        line(x-(bitmojiPosition/150*9),y+(bitmojiPosition/150*49),x-(bitmojiPosition/150*22),y+(bitmojiPosition/150*66));
+        line(x-(bitmojiPosition/150*20),y+(bitmojiPosition/150*60),x-(bitmojiPosition/150*8),y+(bitmojiPosition/150*69)); // k initial
+    
+        fill(0,0,0);
+        line(x+(bitmojiPosition/150*9),y+(bitmojiPosition/150*49),x+(bitmojiPosition/150*9),y+(bitmojiPosition/150*68));
+        fill(201, 201, 201);
+        arc(x+(bitmojiPosition/150*11),y+(bitmojiPosition/150*81),bitmojiPosition/150*38,bitmojiPosition/150*64,bitmojiPosition/150*273,bitmojiPosition/150*311);
+        arc(x+(bitmojiPosition/150*17),y+(bitmojiPosition/150*94),bitmojiPosition/150*32,bitmojiPosition/150*74,bitmojiPosition/150*255,bitmojiPosition/150*409);
+        line(x+(bitmojiPosition/150*9),y+(bitmojiPosition/150*67),x+(bitmojiPosition/150*28),y+(bitmojiPosition/150*68)); // b initial
+    
+        noStroke();
+        fill(212, 255, 112);
+        ellipse(x+(bitmojiPosition/150*2),y+(bitmojiPosition/150*120),bitmojiPosition/150*277,bitmojiPosition/150*103); // white ellipse under sweatshirt
+    };
+drawBitmoji(125,157,100);
+
+//start screen
+fill(179, 104, 179);
+ellipse(200, 50, 310, 70);
+fill(255, 255, 255);
+textSize(25);
+text("Final Project Trivia Game", 60, 40, 300, 300);
+//title on start screen
+    
+fill(0, 0, 0);
+textSize(15);
+text("Katie Boss", 88, 240, 90, 130);
+text("Danny Tran", 243, 240, 90, 130);
+textSize(20);
+text("Choose a Category", 110, 360, 300, 300);
+//other text on start screen
+
+var btn1 = {
+    x: 20,
+    y: 290,
+    label: "History",
+    width: 110,
+    height: 50
+};
+
+var btn2 = {
+    x: 140,
+    y: 290,
+    label: "Video Games",
+    width: 110,
+    height: 50
+};
+
+var btn3 = {
+    x: 260,
+    y: 290,
+    label: "Movies & TV",
+    width: 110,
+    height: 50
+};
+
+var drawButton = function(btn) {
+    fill(179, 104, 179);
+    rect(btn.x, btn.y, btn.width, btn.height, 5);
+    fill(0, 0, 0);
+    textSize(19);
+    textAlign(LEFT, TOP);
+};
+
+var isMouseInside = function(btn) {
+    return (mouseX >= btn.x &&
+            mouseX <= (btn.x+btn.width) &&
+            mouseY >= btn.y && 
+            mouseY <= (btn.y+btn.height));
+};
+
+mouseClicked = function() {
+    if (isMouseInside(btn1))     {
+        println("test 1");    
+    } else if (isMouseInside(btn2))     {
+        println("test 2");    
+    } else if (isMouseInside(btn3)) {
+        println("test 3");
+    }
+};
+
+
+drawButton(btn1);
+drawButton(btn2);
+drawButton(btn3);
